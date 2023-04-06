@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Веклич Д.Н.</title>
+                <style>
+
+                </style>
+        </head>
+            <body>
+                <script>
+                    "use strict";
+                    let mas=[];
+                    for(let i=0;i<20;i++){
+                        mas[i]=Math.floor(Math.random()*50)-20;
+                    }
+                    document.write("Массив чисел: <br \/>" , mas.join());
+                    
+                    let x = prompt('Введите значение X');
+                    let k=0;
+
+
+                    
+                    mas.forEach((element,index,array)=>{
+                        if(element<x){
+                            k++;
+                        }
+                    })
+                    document.write("<br \/> <br \/> Количество чисел меньше X <br \/> " , k);
+
+                    let p=1;
+                    for(let i=0;i<20;i++){
+                        if((i%2)!=0 & mas[i]<0){
+                            p=p*mas[i];
+                        }
+                    }
+
+                    document.write("<br \/> <br \/> Произведение отрицательных чисел, стоящих на нечетных местах <br \/> " , p);
+
+                    
+
+                </script>
+            </body>
+    </html>
